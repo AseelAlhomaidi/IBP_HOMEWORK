@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML Examples</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+<style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+    }
+    h1, h2, h3 {
+      color: #333;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    form {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input, button {
+      padding: 10px;
+      margin-bottom: 15px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    canvas {
+      border: 1px solid #ccc;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+<body class="bg-light">
+  <h1>HTML Examples</h1>
+
+  <section>
+    <h2>Section 1: Links</h2>
+    <ul>
+      <li><a href="https://www.google.com" target="_blank" class="btn btn-primary">Link to Another Site</a></li>
+      <li><a href="#anchor" class="btn btn-primary">Link to Anchor</a></li>
+      <li><a href="page.html" class="btn btn-primary">Link to Page on Same Site</a></li>
+      <li><a href="tel:+1234567890" class="btn btn-primary">Dial a Number</a></li>
+      <li><a href="javascript:void(0);" onclick="alert('Hello, this is Aseel')" class="btn btn-primary">Run JavaScript</a></li>
+      <li><a href="mailto:example@example.com" class="btn btn-primary">Email Link</a></li>
+      <li><a href="https://www.example.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Open in New Tab/Window</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Section 2: Images and Image Maps</h2>
+    <img src="kbu.jpg" alt="image">
+    <br>
+    <img src="Untitled.png" usemap="#image-map">
+
+    <map name="image-map">
+        <area target="_blank" alt="Karabük Belediyesi" title="Karabük Belediyesi" href="https://www.karabuk.bel.tr/default.asp" coords="277,68,290,75,302,69,311,65,306,59,309,50,302,40,288,48,274,55,270,61" shape="poly">
+    </map>
+  </section>
+
+  <section>
+    <h2>Section 3: Input Types and Meta Information</h2>
+    <form>
+      <label for="hidden">Hidden:</label>
+      <input type="hidden" id="hidden" name="hidden" value="Hidden Value">
+      <br>
+
+      <label for="tel">Tel:</label>
+      <input type="tel" id="tel" name="tel">
+      <br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+      <br>
+
+      <label for="number">Number:</label>
+      <input type="number" id="number" name="number">
+      <br>
+
+      <label for="range">Range:</label>
+      <input type="range" id="range" name="range">
+      <br>
+
+      <label for="search">Search:</label>
+      <input type="search" id="search" name="search">
+      <br>
+
+      <label for="image">Image:</label>
+      <input type="image" id="image" src="submit.png" alt="Submit">
+      <br>
+
+      <label for="week">Week:</label>
+      <input type="week" id="week" name="week">
+      <br>
+
+      <label for="url">URL:</label>
+      <input type="url" id="url" name="url">
+      <br>
+
+      <label for="datetime-local">DateTime Local:</label>
+      <input type="datetime-local" id="datetime-local" name="datetime-local">
+      <br>
+
+      <label for="month">Month:</label>
+      <input type="month" id="month" name="month">
+      <br>
+
+      <label for="time">Time:</label>
+      <input type="time" id="time" name="time">
+      <br>
+    </form>
+
+    <h3>Meta Information:</h3>
+    <meta name="author" content="John Doe">
+    <meta name="description" content="This is a website description">
+    <meta name="generator" content="HTML Generator">
+    <meta name="keywords" content="HTML, Examples, Meta Information">
+  </section>
+
+  <section>
+    <h2>Section 4: Form Action</h2>
+    <form action="submit.php" method="get" target="_blank">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
+      <br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+      <br>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <br>
+
+    <h2>Canvas Application</h2>
+    <canvas id="myCanvas" width="400" height="200"></canvas>
+
+    <script>
+      var canvas = document.getElementById("myCanvas");
+      var ctx = canvas.getContext("2d");
+      ctx.fillStyle = "#FF0000";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    </script>
+  </section>
+
+  <a name="anchor"></a>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+</body>
+</html>
